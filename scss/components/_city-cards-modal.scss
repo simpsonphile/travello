@@ -19,7 +19,7 @@
     justify-content: center;
     max-width: 95%;
     padding: 2rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 95vh;
 
     @include respond(tab-port) {

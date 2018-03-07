@@ -1,6 +1,6 @@
 .hotel-form {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
 
   @include respond(tab-port){
@@ -27,7 +27,6 @@
       font-size: 1.2rem;
       text-align: center;
       width: 100%;
-      margin-top: 1rem;
       margin-bottom: 2px;
       color: $color-grey-3;
       font-weight: 700;
