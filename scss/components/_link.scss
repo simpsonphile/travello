@@ -1,0 +1,13 @@
+.link {
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 1;
+
+  &-blue {
+    color: $color-turquoise;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

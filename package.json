@@ -1,0 +1,25 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "node-sass scss/main.scss css/style.css -w",
+    "sass:compile": "node-sass scss/main.scss css/style.css",
+    "concat:css": "concat -o css/style.concat.css css/fontello.css css/style.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
+    "build:css": "npm-run-all sass:compile concat:css prefix:css compress:css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}

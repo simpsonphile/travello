@@ -1,0 +1,22 @@
+.datepicker-input {
+  position: relative;
+  padding: .5rem 3.5rem !important;
+
+
+  &-wrap {
+    position: relative;
+    display: block;
+
+    &::before {
+      color: $color-grey-3;
+      font-family: 'fontello';
+      content: "\e800";
+      position: absolute;
+      font-size: 2rem;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+    }
+  }
+
+}

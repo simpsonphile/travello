@@ -1,0 +1,137 @@
+.cards-interface {
+  position: relative;
+  padding: 1rem;
+  padding-top: $grid-gap * 2 !important;
+  padding-bottom: $grid-gap * 2 !important;
+
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: white;
+    z-index: 5;
+    transform: translate(-50%);
+    top: 45%;
+    line-height: 0;
+    text-align: center;
+    color: $color-turquoise;
+    font-size: 3rem;
+    line-height: 5rem;
+    transition: all .3s;
+    @include shadow-standard;
+
+    &:hover {
+      color: $color-light-blue;
+    }
+  }
+
+  .prev {
+    left: 4rem;
+
+    @include respond(tab-port) {
+      left: 5rem;
+    }
+
+  }
+
+  .next {
+    right: 0rem;
+
+
+  }
+
+}
+
+.city-cards-main-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.city-cards-container {
+  position: relative;
+  width: 200rem;
+  height: 19.7rem;
+  right: 0;
+  transition: all .5s;
+
+  ::after {
+    display: block;
+    content: " ";
+    height: 0;
+    clear: both;
+  }
+}
+
+.city-card {
+  float: left;
+  cursor: pointer;
+  width: 35rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  @include shadow-standard;
+
+  &:not(:first-child) {
+    margin-left: 2rem;
+  }
+
+  margin-right: 2rem;
+
+  .city-card-text {
+    display: none;
+    visibility: none;
+  }
+
+  &:hover {
+    .background {
+        background-image: linear-gradient(45deg,rgba($color-turquoise,0.75), rgba($color-olive,0.75));
+    }
+
+    .city-card-name {
+        background: white;
+
+        span {
+          font-weight: 700;
+          background-image: linear-gradient(180deg, $color-turquoise, $color-light-blue);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+    }
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-image: linear-gradient(45deg,rgba($color-turquoise,0.35), rgba($color-light-blue,0.35));
+  }
+
+  img {
+    display: block;
+    width: 100%;
+
+  }
+
+  &-name {
+    white-space: nowrap;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%);
+    top: 45%;
+    left: 50%;
+    z-index: 3;
+
+    color: white;
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(45deg,rgba($color-turquoise,0.35), rgba($color-light-blue,0.35));
+    text-transform: uppercase;
+  }
+}

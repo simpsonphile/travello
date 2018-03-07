@@ -1,0 +1,94 @@
+.header {
+  box-sizing: content-box;
+  position: relative;
+  height: 100vh;
+  padding-bottom: 10rem;
+
+  @include respond(tab-land){
+    background-image:
+                     linear-gradient(90deg, rgba($color-turquoise, 0.2), rgba($color-light-blue, 0.2)),
+                     url(../img/hero-1280.jpg);
+  }
+
+  @include respond(tab-port){
+    padding-bottom: 20rem;
+  };
+
+  @include respond(desktop){
+    background-image:
+                     linear-gradient(90deg, rgba($color-turquoise, 0.2), rgba($color-light-blue, 0.2)),
+                     url(../img/hero.jpg);
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+
+  .top {
+    background-image: linear-gradient(90deg, rgba($color-turquoise, 0.5), rgba($color-olive, 0.5));
+    padding: 1.5rem 2.5rem;
+    @include shadow-standard;
+
+    &::after {
+      display: block;
+      content: "";
+      height: 0;
+      clear: both;
+    }
+
+    .logo {
+      float: left;
+      position: relative;
+      z-index: 1002;
+    }
+  }
+
+  .mid {
+    transform: translate(-50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 80%;
+
+    .intro {
+
+      &-heading {
+        color: white;
+        font-weight: 700;
+        font-size: 7rem;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+
+        span {
+          display: block;
+          font-size: 2.5rem;
+          font-weight: 400;
+          letter-spacing: 5px;
+          text-transform: none;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -5rem;
+    left: 7.5%;
+    background: white;
+    width: 85%;
+    @include shadow-standard;
+    border-radius: 3px;
+    padding: 2rem;
+
+    @include respond(tab-port){
+      bottom: -15rem;
+    }
+  }
+
+}

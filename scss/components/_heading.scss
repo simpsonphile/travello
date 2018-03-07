@@ -1,0 +1,43 @@
+h1.heading {
+  font-size: 3.5rem;
+}
+
+h2.heading {
+  font-size: 3rem;
+}
+
+h3.heading {
+  font-size: 2.4rem;
+}
+
+h4.heading {
+  font-size: 1.8rem;
+}
+
+.heading {
+
+
+  &-gradient-turqouise {
+    background-image: linear-gradient(180deg, $color-turquoise, $color-light-blue);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &-gradient-orange {
+    background-image: linear-gradient(180deg, $color-orange, $color-gold);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &-gradient-green {
+    background-image: linear-gradient(180deg, $color-olive, $color-green);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+
+
+  &-white {
+    color: white;
+  }
+}

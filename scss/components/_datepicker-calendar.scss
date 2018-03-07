@@ -1,0 +1,105 @@
+.ui-datepicker {
+  border: 1px solid $color-grey-1;
+  background: white;
+  padding: 2rem;
+  display: none;
+  position: absolute;
+  z-index: 2220 !important;
+
+  &-header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+
+  &-prev,
+  &-next {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+
+    background: rgba($color-olive,1);
+    color: white;
+    border-radius: 50%;
+    transition: all .3s;
+
+    &:hover {
+      background: rgba($color-olive,0.5);
+    }
+  }
+
+  &-next {
+    order: 3;
+  }
+
+  &-title {
+    padding: 0 1rem;
+    text-align: center;
+    order: 2;
+    font-weight: 700;
+  }
+
+  &-month {
+    display: inline-block;
+
+  }
+
+  &-year {
+    display: inline-block;
+
+  }
+
+
+  &-calendar {
+
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+
+    thead {
+
+      tr {
+
+        th {
+          background: white;
+          padding: .5rem .5rem 1rem .5rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+
+      }
+
+      td {
+        background: white;
+        border: 1px solid $color-grey-1;
+
+        a {
+          cursor: pointer;
+          padding: .5rem;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: $color-olive;
+          transition: all .3s;
+
+          &:hover {
+            color: white;
+            background: $color-olive;
+          }
+        }
+      }
+    }
+  }
+
+
+}

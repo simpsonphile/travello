@@ -1,0 +1,16 @@
+.section-heading-container {
+  text-align: center;
+  padding-top: $grid-gap * 2 !important;
+  padding-bottom: $grid-gap * 2 !important;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  p {
+    color: $color-grey-3;
+    margin-top: 0.75rem;
+
+    @include respond(phone) {
+      margin-top: 1.3rem;
+    }
+  }
+}

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="top">
+      <a href="index.html"><h1 class="logo">Travello</h1></a>
+
+      <nav class="main-nav">
+        <span class="show-menu">
+          <span class="icon-menu"></span> Menu
+        <label for="show-menu-checkbox" class="show-menu-label"></label>
+        </span>
+
+        <input type="checkbox" id="show-menu-checkbox" name="show-menu-checkbox" class="show-menu-checkbox" hidden>
+
+        <ul class="main-nav-menu" id="main-nav-menu">
+          <li><a href="#search-hotel">Search Hotel</a></li>
+          <li><a href="#most-featured">Most featured</a></li>
+          <li><a href="#notifications">Notifications</a></li>
+          <li><a href="#news">News</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mid">
+      <div class="intro">
+        <h2 class=intro-heading>
+        Visit Brazil
+        <span>With Travello.</span>
+      </h2>
+      </div>
+    </div>
+
+    <div class="bot" id="search-hotel">
+      <form action="#" class="hotel-form">
+        <div class="form-block">
+          <datalist id="hotels-list">
+          <option value="São Paulo">
+          <option value="Rio de Janeiro">
+          <option value="Brasília">
+          <option value="Salvador">
+          <option value="Fortaleza">
+        </datalist>
+
+
+          <label for="hotel-form-city">Where?</label>
+          <input type="text" list=hotels-list name=city class="input-text" placeholder="city or hotel" id=hotel-form-city class="city-input" required>
+        </div>
+        <div class="form-block">
+          <label for="hotel-form-from">Check-in</label>
+          <span class=datepicker-input-wrap>
+          <input type="text" name=from class="input-text from-input datepicker-input" id=hotel-form-from placeholder="01/01/2018" required>
+        </span>
+        </div>
+
+        <div class="form-block">
+          <label for="hotel-form-to">Check-out</label>
+          <span class=datepicker-input-wrap>
+          <input type="text" name=to class="input-text to-input datepicker-input" id=hotel-form-to placeholder="03/01/2018"  required>
+        </span>
+        </div>
+
+        <div class="form-block">
+          <label for="hotel-form-guests">For</label>
+          <span class="guests-input-wrap">
+          <input type="number" name=guests class="input-text form-guests guests-input" id=hotel-form-guests  min=1 max=8 value=1  required>
+        </span>
+        </div>
+
+        <div class="form-block form-block-submit">
+          <input type="submit" value=Search class="button button-olive">
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <section class="explore-by-city" id="#explore-by-city">
+    <div class="row section-heading-container">
+      <h2 class="heading heading-gradient-turqouise">
+        Explore <span class="bolder">Brazil</span> Best Cities
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, autem?</p>
+    </div>
+
+    <div class="row cards-interface">
+      <span class="prev icon-left-open"></span>
+      <span class="next icon-right-open"></span>
+      <div class="row city-cards-main-container">
+
+        <div class="city-cards-container">
+          <div id="city-cards-modal" class="city-cards-modal">
+            <div class="content">
+              <span class="close-icon">&#10006;</span>
+              <div class="modal-image-container"><img src="" alt=""></div>
+              <div class="modal-text"></div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="background"></div>
+            <img srcset="img/rio-card-320.jpg 320w, img/rio-card.jpg 640w"
+                 sizes="(max-width:1200px) 30vw, (max-width: 900px) 45vw, (max-width: 600px) 95vw, 336px"
+                 alt="Rio de Janeiro"
+                 src="img/rio-card.jpg">
+
+            <div class="city-card-name">
+              <span>Rio de Janeiro</span>
+            </div>
+
+            <div class="city-card-text">
+              <h2 class="heading heading-gradient-turqouise">Rio de Janeiro</h2>
+              <p>Rio de Janeiro is one of the most visited cities in the Southern Hemisphere and is known for its natural settings, Carnival, samba, bossa nova, and balneario beaches[9] such as Barra da Tijuca, Copacabana, Ipanema, and Leblon. In addition to the beaches, some of the most famous landmarks include the giant statue of Christ the Redeemer atop Corcovado mountain, named one of the New Seven Wonders of the World; Sugarloaf Mountain with its cable car; the Sambódromo (Sambadrome), a permanent grandstand-lined parade avenue which is used during Carnival; and Maracanã Stadium, one of the world's largest football stadiums.</p>
+            </div>
+          </div>
+
+
+          <div class="city-card">
+            <div class="background"></div>
+            <img srcset="img/sao-card-320.jpg 320w, img/sao-card.jpg 640w"
+                 sizes="(max-width:1200px) 30vw, (max-width: 900px) 45vw, (max-width: 600px) 95vw, 336px"
+                 alt="Sao Paulo"
+                 src="img/sao-card.jpg">
+
+            <div class="city-card-name">
+              <span>Sao Paulo</span>
+            </div>
+
+            <div class="city-card-text">
+              <h2 class="heading heading-gradient-turqouise">Sao Paulo</h2>
+              <p>São Paulo is a cosmopolitan, melting pot city, home to the largest Arab, Italian, and Japanese diasporas, with examples including ethnic neighborhoods of Mercado, Bixiga, and Liberdade respectively. São Paulo is also home to the largest Jewish population in the country and one of the largest urban Jewish populations in the world.[15] In 2016, inhabitants of the city were native to 196 different countries.[16] People from the city are known as paulistanos, while paulistas designates anyone from the state, including the paulistanos. The city's Latin motto, which it has shared with the battleship and the aircraft carrier named after it, is Non ducor, duco, which translates as "I am not led, I lead."</p>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="background"></div>
+            <img srcset="img/brasilia-card-320.jpg 320w, img/brasilia-card.jpg 640w"
+                 sizes="(max-width:1200px) 30vw, (max-width: 900px) 45vw, (max-width: 600px) 95vw, 336px"
+                 alt="Brasilia"
+                 src="img/brasilia-card.jpg">
+            <div class="city-card-name">
+              <span>Brasilia</span>
+            </div>
+
+            <div class="city-card-text">
+              <h2 class="heading heading-gradient-turqouise">Brasilia</h2>
+              <p>
+                Brasília was planned and developed by Lúcio Costa and Oscar Niemeyer in 1956 to move the capital from Rio de Janeiro to a more central location. The landscape architect was Roberto Burle Marx. The city's design divides it into numbered blocks as well as sectors for specified activities, such as the Hotel Sector, the Banking Sector and the Embassy Sector. Brasília was chosen as a UNESCO World Heritage Site due to its modernist architecture and uniquely artistic urban planning.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="city-card">
+            <div class="background"></div>
+            <img srcset="img/salvador-card-320.jpg 320w, img/salvador-card.jpg 640w"
+                 sizes="(max-width:1200px) 30vw, (max-width: 900px) 45vw, (max-width: 600px) 95vw, 336px"
+                 alt="Salvador"
+                 src="img/salvador-card.jpg">
+            <div class="city-card-name">
+              <span>Salvador</span>
+            </div>
+
+            <div class="city-card-text">
+              <h2 class="heading heading-gradient-turqouise">Salvador</h2>
+              <p>
+                Founded by the Portuguese in 1549 as the first capital of Brazil, Salvador is one of the oldest colonial cities in the Americas. A sharp escarpment divides its Lower Town (Cidade Baixa) from its Upper Town (Cidade Alta) by some 85 meters (279 ft). The Elevador Lacerda, Brazil's first elevator, has connected the two since 1873. The Pelourinho district of the upper town, still home to many examples of Portuguese colonial architecture and historical monuments, was named a World Heritage Site by UNESCO in 1985. The city's cathedral is the see of the primate of Brazil and its Carnival celebration has been reckoned as the largest party in the world. Salvador was the first slave port in the Americas and the African influence of the slaves' descendants makes it a center of Afro-Brazilian (preto) culture.
+              </p>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="background"></div>
+            <img srcset="img/fortaleza-card-320.jpg 320w, img/fortaleza-card.jpg 640w"
+                 sizes="(max-width:1200px) 30vw, (max-width: 900px) 45vw, (max-width: 600px) 95vw, 336px"
+                 alt="Fortelaza"
+                 src="img/fortaleza-card.jpg">
+            <div class="city-card-name">
+              <span>Fortaleza</span>
+            </div>
+
+            <div class="city-card-text">
+              <h2 class="heading heading-gradient-turqouise">Fortaleza</h2>
+              <p>
+                In 2013, Fortaleza was the twelfth richest city in the country in GDP and second in the Northeast, with 49 billion reais (US$21 billion). It also has the third richest metropolitan area in the North and Northeast regions. It is an important industrial and commercial center of Brazil, the eighth nation's largest municipal purchasing power. According to the Ministry of Tourism, the city reached the marks of second most desired destination of Brazil and fourth Brazilian city that receives more tourists. The BR-116, the most important highway of the country, starts in Fortaleza. The municipality is part of the Common Market of Mercosur Cities, and also the Brazilian capital which is closest to Europe, 5608 km (3484 miles) from Lisbon, Portugal.              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="most-featured">
+    <div class="row section-heading-container">
+      <h2 class="heading heading-gradient-orange">
+        Most Featured Hotels in Brazil
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, autem?</p>
+    </div>
+    <div class="row  hotel-preview-container">
+
+      <div class="grid-2-4 hotel-preview">
+        <div class="top">
+          <div class="image-container">
+            <img alt="hotel 1" src="img/hotel1.jpeg">
+
+            <div class="rate">10 / 10</div>
+          </div>
+        </div>
+
+        <div class="text">
+          <h3 class="heading">Hotel number 1</h3>
+          <div class="info">
+            <div class="city">
+              <span class=prop-name>City</span> Sao Paulo
+            </div>
+
+            <div class="price">
+              <span class=prop-name>Price</span> 100$
+            </div>
+
+            <div class="icons">
+              <span class=icon>
+                <span class="icon-chat"></span>
+              <span class=amount>16</span>
+              </span>
+
+              <span class=icon>
+                <span class="icon-heart"></span>
+              <span class=amount>64</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="desc">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum fuga necessitatibus architecto atque odio repellat iure voluptatum, voluptatem ab amet recusandae non quasi, pariatur cum...
+
+            </p>
+          </div>
+
+          <div class="bottom">
+            <div class="book-now">
+              <span class="button button-dark-olive">100$</span>
+              <a href="#" class="button button-olive">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2-4 hotel-preview">
+        <div class="top">
+          <div class="image-container">
+            <img src="img/hotel2.jpeg" alt="hotel 2">
+            <div class="rate">9.5 / 10</div>
+          </div>
+        </div>
+
+        <div class="text">
+          <h3 class="heading">Hotel number 1</h3>
+          <div class="info">
+            <div class="city">
+              <span class=prop-name>City</span> Rio de Janeiro
+            </div>
+
+            <div class="price">
+              <span class=prop-name>Price</span> 125$
+            </div>
+
+            <div class="icons">
+              <span class=icon>
+                <span class="icon-chat"></span>
+              <span class=amount>128</span>
+              </span>
+
+              <span class=icon>
+                <span class="icon-heart"></span>
+              <span class=amount>256</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="desc">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum fuga necessitatibus architecto atque odio repellat iure voluptatum, voluptatem ab amet recusandae non quasi, pariatur cum...
+
+            </p>
+          </div>
+
+          <div class="bottom">
+            <div class="book-now">
+              <span class="button button-dark-olive">125$</span>
+              <a href="#" class="button button-olive">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row hotel-preview-container">
+
+      <div class="grid-2-4 hotel-preview">
+        <div class="top">
+          <div class="image-container">
+            <img src="img/hotel3.jpeg" alt="hotel 3">
+            <div class="rate">10 / 10</div>
+          </div>
+        </div>
+
+        <div class="text">
+          <h3 class="heading">Hotel number 3</h3>
+          <div class="info">
+            <div class="city">
+              <span class=prop-name>City</span> Sao Paulo
+            </div>
+
+            <div class="price">
+              <span class=prop-name>Price</span> 199$
+            </div>
+
+            <div class="icons">
+              <span class=icon>
+                <span class="icon-chat"></span>
+              <span class=amount>12</span>
+              </span>
+
+              <span class=icon>
+                <span class="icon-heart"></span>
+              <span class=amount>24</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="desc">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum fuga necessitatibus architecto atque odio repellat iure voluptatum, voluptatem ab amet recusandae non quasi, pariatur cum...
+
+            </p>
+          </div>
+
+          <div class="bottom">
+            <div class="book-now">
+              <span class="button button-dark-olive">199$</span>
+              <a href="#" class="button button-olive">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2-4 hotel-preview">
+        <div class="top">
+          <div class="image-container">
+            <img src="img/hotel4.jpeg" alt="hotel 4">
+            <div class="rate">9 / 10</div>
+          </div>
+        </div>
+
+        <div class="text">
+          <h3 class="heading">Hotel number 4</h3>
+          <div class="info">
+            <div class="city">
+              <span class=prop-name>City</span> Rio de Janeiro
+            </div>
+
+            <div class="price">
+              <span class=prop-name>Price</span> 205$
+            </div>
+
+            <div class="icons">
+              <span class=icon>
+                <span class="icon-chat"></span>
+              <span class=amount>99</span>
+              </span>
+
+              <span class=icon>
+                <span class="icon-heart"></span>
+              <span class=amount>106</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="desc">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum fuga necessitatibus architecto atque odio repellat iure voluptatum, voluptatem ab amet recusandae non quasi, pariatur cum...
+
+            </p>
+          </div>
+
+          <div class="bottom">
+            <div class="book-now">
+              <span class="button button-dark-olive">205$</span>
+              <a href="#" class="button button-olive">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row see-more">
+      <a href="#" class="link link-blue">See more</a>
+    </div>
+  </section>
+
+  <section class="notification" id="notifications">
+    <div class="row section-heading-container">
+      <h2 class="heading heading-white">
+        Get the best hotel reservation with <span class="bolder">Travello</span> alert!
+      </h2>
+      <p>introduce interesting features and we will inform you when such an offer appears</p>
+    </div>
+
+    <form action="#" class="notification-form row">
+      <div class="form-block-column">
+        <label for="notifi-where">Where?</label>
+        <input type="text" placeholder="city or hotel name" class="input-text" id=notifi-where list=hotels-list required>
+      </div>
+
+      <div class="form-block-row">
+        <div class="form-block-column">
+          <label for="notifi-start">Check in</label>
+          <span class=datepicker-input-wrap>
+          <input type="text" name=from class="input-text from-input datepicker-input" id=notifi-start placeholder="01/01/2018" required>
+        </span>
+        </div>
+
+        <div class="form-block-column">
+          <label for="notifi-end">Check out</label>
+          <span class=datepicker-input-wrap>
+          <input type="text" name=from class="input-text from-input datepicker-input" id=notifi-end placeholder="01/01/2018" required>
+        </span>
+        </div>
+      </div>
+
+
+
+      <div class="form-block-row">
+        <div class="form-block-column">
+          <label for="notifi-guests">For</label>
+          <span class="guests-input-wrap">
+          <input type="number" name=guests class="input-text form-guests guests-input" id=notifi-guests  min=1 max=8 value=1  required>
+        </span>
+        </div>
+
+
+        <div class="form-block-column">
+          <label for="notifi-min-price">Min Price</label>
+          <input type="number" name=price-down placeholder="0" class="input-text input-price" min=0 max=2500 id=notifi-min-price required>
+        </div>
+
+        <div class="form-block-column">
+          <label for="notifi-max-price">Max Price</label>
+          <input type="number" name=price-up placeholder="400" class="input-text input-price" min=0 max=2500 id=notifi-max-price required>
+        </div>
+      </div>
+
+      <div class="form-block-row">
+        <div class="form-block-column">
+          <label for="notify-email">Email</label>
+          <input type="email" placeholder="example@example.com" class="email-input input-text" id="notify-email">
+        </div>
+
+        <div class="form-block-column">
+          <input type="submit" value=Notify class="button button-olive notify-button">
+        </div>
+      </div>
+    </form>
+
+  </section>
+
+  <section class="news" id="news">
+    <div class="row section-heading-container">
+      <h2 class="heading heading-gradient-green">
+        News and events
+      </h2>
+      <p>Why it's worth to visit <span class="bolder">Brazil</span></p>
+    </div>
+
+    <div class="row news-card-container">
+      <div class="grid-2-4 news-card">
+        <div class="image">
+          <img src="img/hotel3.jpeg" alt="">
+        </div>
+        <div class="content">
+          <div class="date">22 Feb, 2019</div>
+          <h3 class="heading">Travello top 10 Hotels in Brazil</h3>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing...
+            <a href="#" class="link link-blue">read more</a>
+          </div>
+          <div class="likes">
+            <span class="icon-thumbs-up-alt"></span>
+            <span class="amount">13 127</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2-4 news-card">
+        <div class="image">
+          <img src="img/salvador-card.jpg" alt="">
+        </div>
+        <div class="content">
+          <div class="date">12 Apr, 2020</div>
+          <h3 class="heading">Places to visit in Salvador</h3>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing...
+            <a href="#" class="link link-blue">read more</a>
+          </div>
+          <div class="likes">
+            <span class="icon-thumbs-up-alt"></span>
+            <span class="amount">1 821</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row  news-card-container">
+      <div class="grid-2-4 news-card">
+        <div class="image">
+          <img src="img/rio.jpg" alt="">
+        </div>
+        <div class="content">
+          <div class="date">12 Apr, 2020</div>
+          <h3 class="heading">Why you should Travel to Brazill</h3>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing...
+            <a href="#" class="link link-blue">read more</a>
+          </div>
+          <div class="likes">
+            <span class="icon-thumbs-up-alt"></span>
+            <span class="amount">14 429</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2-4 news-card">
+        <div class="image">
+          <img src="img/hero.jpg" alt="">
+        </div>
+        <div class="content">
+          <div class="date">12 Apr, 2020</div>
+          <h3 class="heading">Why you should Travel to Brazill 2</h3>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing...
+            <a href="#" class="link link-blue">read more</a>
+          </div>
+          <div class="likes">
+            <span class="icon-thumbs-up-alt"></span>
+            <span class="amount">3 321</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="left">
+      <h1 class="logo">Travello</h1>
+      <p class="copyright">Travello &copy; 2018. All rights reserved. This project is made by Dawid Mazewski and it is only demo.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#search-hotel">Search Hotel</a></li>
+        <li><a href="#most-featured">Most featured</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </nav>
+
+  </footer>
+<script src="js/main-min.js" charset="utf-8"></script>
+</body>
+
+</html>

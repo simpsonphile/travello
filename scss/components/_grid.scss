@@ -1,0 +1,69 @@
+.row {
+  max-width: 1140px;
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: $grid-gap * 2;
+  padding-bottom: $grid-gap * 2;
+  @include respond(tab-port) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
+
+  &::after{
+    height: 0;
+    content: " ";
+    clear: both;
+    display: block;
+  }
+
+  div[class^="grid-"] {
+   @include respond(tab-port) {
+     width: 100% !important;
+     margin-top: $grid-gap;
+     margin-bottom: $grid-gap;
+     margin-right: 0;
+     margin-left: 0;
+     padding: 2rem;
+   }
+ }
+
+  .grid-1-4 {
+    margin-right: $grid-gap;
+    margin-left: $grid-gap;
+    width: calc((100% - #{$grid-gap}*8) / 4);
+    float: left;
+  }
+
+  .grid-2-4 {
+    margin-right: $grid-gap;
+    margin-left: $grid-gap;
+    width: calc((100% - #{$grid-gap}*4) / 2);
+    float: left;
+  }
+
+  .grid-3-4 {
+    margin-right: $grid-gap;
+    margin-left: $grid-gap;
+    width: calc((100% - #{$grid-gap} * 8 / 3) / 4 * 3);
+    float: left;
+  }
+
+  .grid-1-3 {
+    margin-right: $grid-gap;
+    margin-left: $grid-gap;
+    width: calc((100% - #{$grid-gap} * 6) / 3);
+    float: left;
+  }
+
+  .grid-2-3 {
+    margin-right: $grid-gap;
+    margin-left: $grid-gap;
+    width: calc((100% - #{$grid-gap} * 3) / 3 * 2);
+    float: left;
+  }
+
+}

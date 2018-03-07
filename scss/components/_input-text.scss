@@ -1,0 +1,22 @@
+.input-text {
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: $color-grey-1;
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
+
+
+  &:focus {
+    outline: 1px solid $color-olive;
+    border: none;
+  }
+
+}

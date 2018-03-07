@@ -1,0 +1,82 @@
+.hotel-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  @include respond(tab-port){
+    flex-direction: column;
+  }
+
+
+  .form-block {
+    display: block;
+
+
+    &:last-child {
+      display: flex;
+      align-self: flex-end;
+
+      @include respond(tab-port){
+        align-self: center;
+        margin-top: 1rem;
+      }
+    }
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+      text-align: center;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 2px;
+      color: $color-grey-3;
+      font-weight: 700;
+
+      @include respond(tab-port){
+        font-size: 1.4rem;
+      }
+    }
+
+
+    input {
+      display: block;
+      width: 100%;
+      border-right-width: 0px;
+      border-left-width: 1px;
+      border-bottom-width: 1px;
+      border-top-width: 1px;
+      height: 4rem;
+
+      @include respond(tab-port){
+        border-right-width: 1px;
+      }
+
+
+      &[type=submit] {
+        margin-left: 1rem;
+        border-right-width: 1px;
+
+        @include respond(tab-port){
+          margin: 0;
+        }
+      }
+
+      &.hotel-input {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &.form-guests {
+        border-right-width: 1px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      &:focus {
+        outline: 1px solid $color-olive;
+      }
+    }
+
+  }
+
+}

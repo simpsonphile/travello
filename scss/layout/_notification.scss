@@ -1,0 +1,66 @@
+.notification {
+  margin-top: 8rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8rem 4rem;
+  color: white;
+
+  @include respond(tab-land){
+    background-image:
+                    linear-gradient( rgba($color-turquoise, 0.85), rgba($color-light-blue,0.85)),
+                    url(../img/rio-1280.jpg);
+  }
+
+  @include respond(desktop){
+    background-image:
+                    linear-gradient( rgba($color-turquoise, 0.85), rgba($color-light-blue,0.85)),
+                    url(../img/rio.jpg);
+  }
+
+
+  .section-heading-container > p {
+    color: white;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    .form-block-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .form-block-column {
+      max-width: 20rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+
+      margin-bottom: 2px;
+    }
+
+    input {
+      min-width: 10rem;
+      display: block;
+      height: 4rem;
+    }
+
+    .email-input {
+      border: 2px solid $color-olive;
+    }
+
+    .notify-button {
+      border: none;
+      border-radius: 0 !important;
+    }
+
+
+  }
+}

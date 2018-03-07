@@ -1,0 +1,161 @@
+.hotel-preview {
+
+  &-container {
+
+    @include respond(tab-port) {
+      max-width: 750px;
+    }
+
+     @include respond(phone) {
+       max-width: 400px;
+     }
+   }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  .top {
+    margin-bottom: 3rem;
+
+    @include respond(tab-port){
+      margin-bottom: 0;
+      margin-right: 3rem;
+    }
+
+    @include respond(phone){
+      margin-bottom: 3rem;
+      margin-right: 0;
+    }
+
+    .image-container {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .rate {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: $color-olive;
+        padding: 2rem;
+        color: white;
+        font-weight: 700;
+        border-top-left-radius: 5px;
+      }
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .prop-name {
+          display: block;
+          color: $color-grey-3;
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          font-weight: 300
+      }
+
+      .city {
+        color: $color-turquoise;
+        font-weight: 700;
+        margin-right: 5rem;
+      }
+
+      .price {
+        color: $color-olive;
+        font-weight: 700;
+        margin-right: 5rem;
+      }
+
+      .icons {
+        display: flex;
+
+        & > .icon {
+          cursor: pointer;
+          display: block;
+          position: relative;
+
+          &:last-child {
+            margin-left: 2rem;
+          }
+
+          .icon-heart,
+          .icon-chat {
+            color: $color-turquoise;
+            font-size: 2.5rem;
+          }
+
+          .amount {
+            font-size: 1rem;
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 1px 3px;
+          }
+        }
+      }
+    }
+
+    .desc {
+      color: $color-grey-3;
+      line-height: 1.5;
+      text-align: justify;
+      margin-bottom: 2rem;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .book-now {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-right: 5rem;
+
+        .button:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          cursor: default;
+          font-weight: 700;
+        }
+
+        .button:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}
