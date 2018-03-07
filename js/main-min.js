@@ -12,3 +12,4 @@ let modal=document.querySelector('#city-cards-modal');let modalText=modal.queryS
 function clearModal(){modalImageContainer.innerHTML='';modalText.innerHTML='';window.location.assign('#explore-by-city')}
 modal.addEventListener('click',function(e){console.log(e);if(e.path[0]==modal)
 clearModal()});closeModal.addEventListener('click',function(){clearModal()});window.addEventListener('keydown',function(e){if(e.keyCode==27||e.key=='Escape'){clearModal()}})
+$(".datepicker-input").attr('readonly','readonly');

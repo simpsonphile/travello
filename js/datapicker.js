@@ -10,5 +10,5 @@ $( function() {
     }
 
     });
-
+    $(".datepicker-input").attr('readonly','readonly');
   } );
