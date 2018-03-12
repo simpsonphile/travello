@@ -41,6 +41,13 @@
       margin-bottom: 2.5rem;
     }
 
+    .form-block-date {
+      align-items: flex-start;
+      @include respond(phone){
+        flex-direction: column;
+      }
+    }
+
     label {
 
       margin-bottom: 2px;

@@ -5,6 +5,7 @@ let closeModal = modal.querySelector('.close-icon');
 
 for (var i = 0; i < cityCards.length; i++) {
   cityCards[i].addEventListener('click', function(e){
+    clearModal();
     //tworzymy obrazek
     let newImage = document.createElement('img');
     newImage.src = this.getElementsByTagName('img')[0].src;

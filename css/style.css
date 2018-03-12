@@ -610,7 +610,8 @@ h4.heading {
       .city-cards-modal .content .close-icon:hover, .city-cards-modal .content .close-icon:active {
         color: #49C5FF; }
     .city-cards-modal .content .modal-image-container {
-      flex: 0 1 45%; }
+      flex: 0 1 45%;
+      margin-right: 5%; }
       @media (max-width: 900px) {
         .city-cards-modal .content .modal-image-container {
           flex: none;
@@ -625,7 +626,7 @@ h4.heading {
       .city-cards-modal .content .modal-image-container img {
         width: 100%; }
     .city-cards-modal .content .modal-text {
-      flex: 0 1 55%;
+      flex: 0 1 50%;
       padding-left: 2rem; }
       @media (max-width: 900px) {
         .city-cards-modal .content .modal-text {
@@ -721,16 +722,22 @@ h4.heading {
   justify-content: center; }
   @media (max-width: 900px) {
     .hotel-form {
-      flex-direction: column; } }
+      flex-direction: column;
+      align-items: stretch; } }
   .hotel-form .form-block {
     display: block; }
+    @media (max-width: 900px) {
+      .hotel-form .form-block {
+        width: 100%;
+        margin-bottom: 1rem; } }
     .hotel-form .form-block:last-child {
       display: flex;
       align-self: flex-end; }
       @media (max-width: 900px) {
         .hotel-form .form-block:last-child {
           align-self: center;
-          margin-top: 1rem; } }
+          margin-top: 1rem;
+          margin-bottom: 0; } }
     .hotel-form .form-block label {
       display: block;
       font-size: 1.2rem;
@@ -805,6 +812,11 @@ h4.heading {
       display: flex;
       flex-direction: column;
       margin-bottom: 2.5rem; }
+    .notification-form .form-block-date {
+      align-items: flex-start; }
+      @media (max-width: 600px) {
+        .notification-form .form-block-date {
+          flex-direction: column; } }
     .notification-form label {
       margin-bottom: 2px; }
     .notification-form input {

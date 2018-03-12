@@ -5,11 +5,17 @@
 
   @include respond(tab-port){
     flex-direction: column;
+    align-items: stretch;
   }
 
 
   .form-block {
     display: block;
+
+    @include respond(tab-port){
+      width: 100%;
+      margin-bottom: 1rem;
+    }
 
 
     &:last-child {
@@ -19,6 +25,7 @@
       @include respond(tab-port){
         align-self: center;
         margin-top: 1rem;
+        margin-bottom: 0;
       }
     }
 
