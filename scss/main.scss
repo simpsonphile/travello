@@ -2,8 +2,10 @@
 @import "abstracts/mixins";
 @import "abstracts/media-queries";
 
+@import "general/normalize";
 @import "general/reset";
 @import "general/general";
+
 
 @import "utilities/utilities";
 
