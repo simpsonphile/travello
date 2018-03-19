@@ -1,3 +1,3 @@
 # travello
 Travel agency booking website demo
-live version: simpsonphile.github.io/travello
+live version: <a href="https://simpsonphile.github.io/travello">https://simpsonphile.github.io/travello</a>
